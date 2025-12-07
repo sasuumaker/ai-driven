@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
 :root {
+  /* Background Colors */
   --background: #ffffff;
-  --foreground: #171717;
+  --background-secondary: #f8f9fa;
+  --foreground: #333333;
+  --foreground-secondary: #666666;
+
+  /* Pastel Colors */
+  --pastel-mint: #A8D5BA;
+  --pastel-coral: #FFB7B2;
+  --pastel-peach: #FFDAC1;
+  --pastel-green: #B5EAD7;
+  --pastel-lavender: #C7CEEA;
+  --pastel-lime: #E2F0CB;
+  --pastel-pink: #FFC8DD;
+  --pastel-blue: #BDE0FE;
+  --pastel-yellow: #FFF3B0;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-foreground-secondary: var(--foreground-secondary);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Pastel Theme Colors */
+  --color-pastel-mint: var(--pastel-mint);
+  --color-pastel-coral: var(--pastel-coral);
+  --color-pastel-peach: var(--pastel-peach);
+  --color-pastel-green: var(--pastel-green);
+  --color-pastel-lavender: var(--pastel-lavender);
+  --color-pastel-lime: var(--pastel-lime);
+  --color-pastel-pink: var(--pastel-pink);
+  --color-pastel-blue: var(--pastel-blue);
+  --color-pastel-yellow: var(--pastel-yellow);
+
+  /* Font Family */
+  --font-sans: "Noto Sans JP", sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* Custom utility classes */
+.btn-primary {
+  @apply bg-pastel-mint text-foreground font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105;
+}
+
+.btn-secondary {
+  @apply bg-pastel-lavender text-foreground font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-md p-6;
+}
+
+/* Progress bar animation */
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+}
+
+.animate-progress {
+  animation: progress 0.5s ease-out forwards;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Scale in animation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out forwards;
 }

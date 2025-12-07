@@ -1,0 +1,422 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2024-01-01",
+  "jobs": {
+    "ENFJ-A": {
+      "id": "enfj-a",
+      "type": "ENFJ-A",
+      "name": "AIコミュニティマネージャー",
+      "description": "AIツールを活用してオンラインコミュニティを運営・活性化する職業。メンバーのエンゲージメントを高め、AIを使った効率的なコミュニケーション戦略を立案・実行する。",
+      "skills": ["コミュニケーション力", "リーダーシップ", "AIツール活用", "データ分析", "コンテンツ企画"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AIコミュニティの需要は急速に拡大中。企業のファンコミュニティ運営需要も増加。",
+      "aptitudes": {
+        "strengths": ["人を巻き込む力がある", "ビジョンを描ける", "チームを鼓舞できる", "コミュニケーション能力に優れる"],
+        "workStyles": ["チームをリードする立場", "人と関わる仕事", "大きな影響を与えられる環境"]
+      }
+    },
+    "ENFJ-T": {
+      "id": "enfj-t",
+      "type": "ENFJ-T",
+      "name": "AI教育コーディネーター",
+      "description": "AI時代に必要なスキルを教える教育プログラムを設計・運営する職業。学習者一人ひとりの成長を丁寧にサポートし、AIツールを活用した効果的な学習体験を提供する。",
+      "skills": ["教育設計", "カウンセリング", "AIツール活用", "カリキュラム開発", "共感力"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AI教育の需要は今後も拡大。リスキリング市場の成長が追い風。",
+      "aptitudes": {
+        "strengths": ["他者の成長を支援できる", "細やかな配慮ができる", "信頼関係を築ける", "忍耐力がある"],
+        "workStyles": ["人の成長に寄り添う仕事", "丁寧なサポートが求められる環境"]
+      }
+    },
+    "ENFP-A": {
+      "id": "enfp-a",
+      "type": "ENFP-A",
+      "name": "AIクリエイティブディレクター",
+      "description": "生成AIを活用した広告・コンテンツ制作をディレクションする職業。斬新なアイデアを形にし、AIと人間のクリエイティビティを融合させた作品を生み出す。",
+      "skills": ["クリエイティブ発想", "AI画像/動画生成", "プロジェクト管理", "トレンド感知", "プレゼンテーション"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AIクリエイティブの需要は爆発的に増加。差別化できる人材が求められる。",
+      "aptitudes": {
+        "strengths": ["発想力が豊か", "新しいことに挑戦できる", "人を巻き込む情熱がある", "トレンドに敏感"],
+        "workStyles": ["自由度の高い環境", "新しいチャレンジができる職場", "チームでの共創"]
+      }
+    },
+    "ENFP-T": {
+      "id": "enfp-t",
+      "type": "ENFP-T",
+      "name": "AIストーリーテラー",
+      "description": "AIを活用して魅力的な物語やナラティブを創作する職業。ブランドストーリー、小説、脚本など、様々な形式でAIと協働しながら感動を生み出す。",
+      "skills": ["ストーリーテリング", "文章力", "AI文章生成活用", "感性", "編集力"],
+      "futureProspect": "high",
+      "futureProspectDescription": "コンテンツ需要の増加に伴い、質の高いストーリーを作れる人材が重宝される。",
+      "aptitudes": {
+        "strengths": ["豊かな想像力", "感情を揺さぶる表現力", "深い共感性", "言葉へのこだわり"],
+        "workStyles": ["感性を活かせる仕事", "じっくり作品を磨ける環境"]
+      }
+    },
+    "ENTJ-A": {
+      "id": "entj-a",
+      "type": "ENTJ-A",
+      "name": "AI事業戦略責任者",
+      "description": "企業のAI戦略を統括し、AIを活用した事業変革をリードする経営幹部。ビジョンを描き、組織全体のAI活用を推進する。",
+      "skills": ["経営戦略", "リーダーシップ", "AI技術理解", "組織マネジメント", "意思決定力"],
+      "futureProspect": "high",
+      "futureProspectDescription": "全ての企業がAI戦略を必要とする時代。経営層のAI人材需要は急増。",
+      "aptitudes": {
+        "strengths": ["決断力が高い", "大局観がある", "組織を動かせる", "目標達成への執念"],
+        "workStyles": ["経営に関わる立場", "大きな裁量がある環境", "結果で評価される職場"]
+      }
+    },
+    "ENTJ-T": {
+      "id": "entj-t",
+      "type": "ENTJ-T",
+      "name": "AIプロダクトマネージャー",
+      "description": "AI機能を搭載したプロダクトの企画・開発・改善を統括する職業。市場ニーズを把握し、技術チームと連携して競争力のある製品を生み出す。",
+      "skills": ["プロダクト戦略", "AI技術理解", "データ分析", "ステークホルダー調整", "課題解決"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AIプロダクトの増加に伴い、優秀なPMの需要は高まる一方。",
+      "aptitudes": {
+        "strengths": ["計画立案能力", "品質へのこだわり", "チームを導く力", "市場分析力"],
+        "workStyles": ["製品の成功に責任を持つ立場", "緻密な計画が求められる環境"]
+      }
+    },
+    "ENTP-A": {
+      "id": "entp-a",
+      "type": "ENTP-A",
+      "name": "AIイノベーションコンサルタント",
+      "description": "企業に対してAIを活用した革新的なビジネスモデルや解決策を提案するコンサルタント。既存の常識を覆す発想で、クライアントの変革を支援する。",
+      "skills": ["戦略思考", "AI技術トレンド把握", "プレゼンテーション", "問題発見力", "議論力"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AI導入支援の需要は全業界で増加。差別化できるコンサルは重宝される。",
+      "aptitudes": {
+        "strengths": ["斬新なアイデアを生む", "議論を楽しめる", "変化を恐れない", "説得力がある"],
+        "workStyles": ["新しい挑戦が多い環境", "議論・ディベートが活発な職場"]
+      }
+    },
+    "ENTP-T": {
+      "id": "entp-t",
+      "type": "ENTP-T",
+      "name": "AIリサーチャー",
+      "description": "最新のAI技術動向を調査・分析し、ビジネスへの応用可能性をレポートする職業。深い知的好奇心を持って、AIの可能性を探求する。",
+      "skills": ["調査分析力", "技術理解", "レポーティング", "批判的思考", "情報収集力"],
+      "futureProspect": "medium",
+      "futureProspectDescription": "AI技術の進化が速いため、常に最新情報をキャッチアップする人材が必要。",
+      "aptitudes": {
+        "strengths": ["知的好奇心が旺盛", "多角的な視点", "本質を見抜く力", "分析力"],
+        "workStyles": ["探求・研究に没頭できる環境", "深く考える時間がある職場"]
+      }
+    },
+    "ESFJ-A": {
+      "id": "esfj-a",
+      "type": "ESFJ-A",
+      "name": "AIカスタマーサクセスマネージャー",
+      "description": "AIツール・サービスを導入した顧客の成功を支援する職業。顧客との信頼関係を築き、AIの活用を通じた価値実現をサポートする。",
+      "skills": ["顧客対応力", "関係構築", "AIツール知識", "問題解決", "チームワーク"],
+      "futureProspect": "high",
+      "futureProspectDescription": "SaaS・AIサービスの普及に伴い、カスタマーサクセスの重要性は増大。",
+      "aptitudes": {
+        "strengths": ["人の役に立ちたい気持ちが強い", "信頼関係を築ける", "協調性が高い", "サポート精神"],
+        "workStyles": ["顧客と直接関わる仕事", "チームで協力する環境", "感謝される場面が多い職場"]
+      }
+    },
+    "ESFJ-T": {
+      "id": "esfj-t",
+      "type": "ESFJ-T",
+      "name": "AIユーザーサポートスペシャリスト",
+      "description": "AIツール・サービスのユーザーからの問い合わせに対応し、丁寧なサポートを提供する職業。ユーザーの困りごとを解決し、満足度向上に貢献する。",
+      "skills": ["傾聴力", "問題解決", "AIツール知識", "文書作成", "忍耐力"],
+      "futureProspect": "medium",
+      "futureProspectDescription": "AIが普及するほど、使い方のサポート需要は増加。",
+      "aptitudes": {
+        "strengths": ["細やかな気配りができる", "丁寧な対応", "責任感が強い", "忍耐力"],
+        "workStyles": ["人を助ける仕事", "マニュアルに沿った丁寧な対応が求められる環境"]
+      }
+    },
+    "ESFP-A": {
+      "id": "esfp-a",
+      "type": "ESFP-A",
+      "name": "AIインフルエンサー",
+      "description": "AI技術やツールの魅力を楽しく分かりやすく発信するインフルエンサー。SNSや動画でAIの使い方や可能性を伝え、多くのフォロワーを獲得する。",
+      "skills": ["SNS運用", "動画制作", "AIツール活用", "エンタメ性", "自己ブランディング"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AI関連コンテンツへの関心は高く、発信者への需要は増加中。",
+      "aptitudes": {
+        "strengths": ["人を楽しませる才能", "行動力", "トレンドをキャッチする感性", "表現力"],
+        "workStyles": ["自由に表現できる環境", "注目を集める仕事", "即座にリアクションがある職場"]
+      }
+    },
+    "ESFP-T": {
+      "id": "esfp-t",
+      "type": "ESFP-T",
+      "name": "AIイベントプロデューサー",
+      "description": "AIをテーマにしたイベント・カンファレンス・ワークショップを企画・運営する職業。参加者に忘れられない体験を提供する。",
+      "skills": ["イベント企画", "AIトレンド理解", "コミュニケーション", "危機管理", "演出力"],
+      "futureProspect": "medium",
+      "futureProspectDescription": "AIイベント・セミナーの需要は増加傾向。",
+      "aptitudes": {
+        "strengths": ["場を盛り上げる力", "臨機応変な対応", "人を喜ばせたい気持ち", "行動力"],
+        "workStyles": ["華やかな舞台がある仕事", "多くの人と関わる環境"]
+      }
+    },
+    "ESTJ-A": {
+      "id": "estj-a",
+      "type": "ESTJ-A",
+      "name": "AI導入プロジェクトマネージャー",
+      "description": "企業へのAIシステム導入プロジェクトを統括する職業。スケジュール・予算・品質を管理し、確実にプロジェクトを成功に導く。",
+      "skills": ["プロジェクト管理", "AI技術理解", "リーダーシップ", "リスク管理", "交渉力"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AI導入プロジェクトの増加に伴い、優秀なPMの需要は高い。",
+      "aptitudes": {
+        "strengths": ["計画通りに物事を進める力", "責任感", "組織をまとめる力", "実行力"],
+        "workStyles": ["明確な目標がある環境", "責任と権限が与えられる立場"]
+      }
+    },
+    "ESTJ-T": {
+      "id": "estj-t",
+      "type": "ESTJ-T",
+      "name": "AIコンプライアンスオフィサー",
+      "description": "企業のAI活用が法規制・倫理基準に準拠しているかを監視・管理する職業。AIガバナンスの構築と運用を担う。",
+      "skills": ["法務知識", "AIリスク理解", "監査能力", "文書化", "ステークホルダー調整"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AI規制の強化に伴い、コンプライアンス人材の需要は急増。",
+      "aptitudes": {
+        "strengths": ["ルールを守る姿勢", "細部への注意力", "正確性へのこだわり", "責任感"],
+        "workStyles": ["秩序を重視する環境", "ルールに基づいた判断が求められる職場"]
+      }
+    },
+    "ESTP-A": {
+      "id": "estp-a",
+      "type": "ESTP-A",
+      "name": "AIスタートアップファウンダー",
+      "description": "AI技術を活用した新規事業を立ち上げる起業家。リスクを恐れず、スピーディーに行動して市場を切り開く。",
+      "skills": ["起業家精神", "AI技術理解", "資金調達", "営業力", "リスクテイク"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AIスタートアップへの投資は活発。成功すれば大きなリターン。",
+      "aptitudes": {
+        "strengths": ["行動力", "リスクを恐れない", "チャンスを掴む嗅覚", "適応力"],
+        "workStyles": ["自分で道を切り開く環境", "スピード感のある職場"]
+      }
+    },
+    "ESTP-T": {
+      "id": "estp-t",
+      "type": "ESTP-T",
+      "name": "AIセールスエンジニア",
+      "description": "AI製品・サービスの技術的な側面を理解し、顧客への提案・導入支援を行う職業。技術と営業の橋渡し役を担う。",
+      "skills": ["技術理解", "営業力", "プレゼンテーション", "デモンストレーション", "課題ヒアリング"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AIソリューションの販売には技術を理解した営業が不可欠。",
+      "aptitudes": {
+        "strengths": ["実践的な説得力", "その場での対応力", "結果へのコミット", "行動力"],
+        "workStyles": ["成果が数字で見える仕事", "現場での活動が多い環境"]
+      }
+    },
+    "INFJ-A": {
+      "id": "infj-a",
+      "type": "INFJ-A",
+      "name": "AI倫理コンサルタント",
+      "description": "企業のAI活用における倫理的課題を分析し、責任あるAI開発・運用を支援する職業。AIと社会の調和を追求する。",
+      "skills": ["倫理学", "AI技術理解", "分析力", "コミュニケーション", "ビジョン構築"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AI倫理への関心は世界的に高まっており、専門家の需要は増加。",
+      "aptitudes": {
+        "strengths": ["深い洞察力", "理想を追求する姿勢", "社会への貢献意識", "共感力"],
+        "workStyles": ["社会的意義のある仕事", "深く考える時間がある環境"]
+      }
+    },
+    "INFJ-T": {
+      "id": "infj-t",
+      "type": "INFJ-T",
+      "name": "AIウェルビーイングデザイナー",
+      "description": "AIを活用して人々の心身の健康・幸福を向上させるサービス・体験を設計する職業。人間中心のAI活用を追求する。",
+      "skills": ["UXデザイン", "心理学", "AI活用", "共感力", "サービス設計"],
+      "futureProspect": "medium",
+      "futureProspectDescription": "ウェルビーイング市場の成長とAI活用の融合が期待される。",
+      "aptitudes": {
+        "strengths": ["人の心を理解する力", "理想と現実のバランス感覚", "丁寧な設計力", "洞察力"],
+        "workStyles": ["人の幸せに貢献する仕事", "じっくり設計できる環境"]
+      }
+    },
+    "INFP-A": {
+      "id": "infp-a",
+      "type": "INFP-A",
+      "name": "AIアートディレクター",
+      "description": "AI画像生成ツールを活用して、独自の世界観を持つアート作品やビジュアルを創造する職業。人間の感性とAIの能力を融合させた新しい表現を追求する。",
+      "skills": ["芸術的センス", "AI画像生成", "ビジュアル構成", "コンセプト設計", "美的感覚"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AIアートの市場は急成長中。独自性のあるアーティストが求められる。",
+      "aptitudes": {
+        "strengths": ["独創的な発想", "美的感覚", "内面世界を表現する力", "創造性"],
+        "workStyles": ["自分の世界観を表現できる環境", "自由な創作活動"]
+      }
+    },
+    "INFP-T": {
+      "id": "infp-t",
+      "type": "INFP-T",
+      "name": "AIコンテンツライター",
+      "description": "AI文章生成ツールと協働して、心に響くコンテンツを創作する職業。AIの出力を人間の感性で磨き上げ、読者の心を動かす文章を生み出す。",
+      "skills": ["文章力", "AI文章生成活用", "編集力", "感性", "トーン調整"],
+      "futureProspect": "medium",
+      "futureProspectDescription": "AIと協働できるライターは今後も需要あり。",
+      "aptitudes": {
+        "strengths": ["繊細な表現力", "読者への共感", "言葉へのこだわり", "感受性"],
+        "workStyles": ["一人で集中できる環境", "感性を活かせる仕事"]
+      }
+    },
+    "INTJ-A": {
+      "id": "intj-a",
+      "type": "INTJ-A",
+      "name": "AIシステムアーキテクト",
+      "description": "大規模なAIシステムの設計・構築を担う職業。技術的なビジョンを描き、複雑なシステムを効率的に構築する。",
+      "skills": ["システム設計", "AI/ML知識", "クラウドアーキテクチャ", "戦略的思考", "技術リーダーシップ"],
+      "futureProspect": "high",
+      "futureProspectDescription": "企業のAIシステム構築需要は増加の一途。高度な設計能力が求められる。",
+      "aptitudes": {
+        "strengths": ["長期的なビジョン構築力", "複雑な問題の整理能力", "論理的思考", "戦略性"],
+        "workStyles": ["高度な技術的挑戦がある環境", "戦略的な判断ができる立場"]
+      }
+    },
+    "INTJ-T": {
+      "id": "intj-t",
+      "type": "INTJ-T",
+      "name": "AIアルゴリズムエンジニア",
+      "description": "AIの中核となるアルゴリズムを設計・最適化するエンジニア。効率性と精度を追求し、最高品質のAIモデルを開発する。",
+      "skills": ["数学", "機械学習", "プログラミング", "最適化", "研究能力"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AI技術の根幹を担う人材は常に不足。高い専門性が求められる。",
+      "aptitudes": {
+        "strengths": ["完璧を追求する姿勢", "深い専門性", "問題解決への執念", "分析力"],
+        "workStyles": ["技術的な深掘りができる環境", "品質にこだわれる職場"]
+      }
+    },
+    "INTP-A": {
+      "id": "intp-a",
+      "type": "INTP-A",
+      "name": "AIリサーチサイエンティスト",
+      "description": "AI/機械学習の最先端研究を行う科学者。新しいアルゴリズムやモデルを発見・開発し、AI技術の進歩に貢献する。",
+      "skills": ["研究能力", "数学", "機械学習", "論文執筆", "実験設計"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AI研究者は世界中で不足。最先端の研究は高く評価される。",
+      "aptitudes": {
+        "strengths": ["知的好奇心", "理論構築力", "新しい概念を理解する力", "独創性"],
+        "workStyles": ["自由に探求できる環境", "知的刺激のある職場"]
+      }
+    },
+    "INTP-T": {
+      "id": "intp-t",
+      "type": "INTP-T",
+      "name": "プロンプトエンジニア",
+      "description": "大規模言語モデル（LLM）から最適な出力を引き出すプロンプトを設計・最適化する職業。AIの能力を最大限に引き出す「AIの翻訳者」。",
+      "skills": ["論理的思考", "言語理解", "実験・検証", "AI理解", "文章構成力"],
+      "futureProspect": "high",
+      "futureProspectDescription": "LLMの普及に伴い、プロンプトエンジニアリングの需要は急増。",
+      "aptitudes": {
+        "strengths": ["論理的な分析力", "試行錯誤を楽しめる", "パターン認識力", "好奇心"],
+        "workStyles": ["実験と改善を繰り返せる環境", "一人で深く考える時間がある職場"]
+      }
+    },
+    "ISFJ-A": {
+      "id": "isfj-a",
+      "type": "ISFJ-A",
+      "name": "AIデータキュレーター",
+      "description": "AIの学習に使用するデータセットを収集・整理・品質管理する職業。正確で偏りのないデータを準備し、AIの品質向上に貢献する。",
+      "skills": ["データ管理", "品質管理", "細部への注意", "AI理解", "ドキュメンテーション"],
+      "futureProspect": "medium",
+      "futureProspectDescription": "データの品質がAIの品質を決める。丁寧な作業ができる人材は重宝される。",
+      "aptitudes": {
+        "strengths": ["正確さへのこだわり", "忍耐力", "責任感", "細やかさ"],
+        "workStyles": ["安定した環境", "明確なルールがある職場", "チームを支える役割"]
+      }
+    },
+    "ISFJ-T": {
+      "id": "isfj-t",
+      "type": "ISFJ-T",
+      "name": "AIトレーニングアノテーター",
+      "description": "AIモデルの学習に必要なデータにラベル付け（アノテーション）を行う職業。AIの「先生」として、正確なデータを提供する。",
+      "skills": ["注意力", "正確性", "ガイドライン遵守", "AI理解", "フィードバック"],
+      "futureProspect": "medium",
+      "futureProspectDescription": "AI開発には不可欠な役割。ただし自動化の波も来ている。",
+      "aptitudes": {
+        "strengths": ["細かい作業を正確にこなせる", "ルールを守る", "忍耐力", "集中力"],
+        "workStyles": ["明確な手順がある仕事", "静かに集中できる環境"]
+      }
+    },
+    "ISFP-A": {
+      "id": "isfp-a",
+      "type": "ISFP-A",
+      "name": "AIビジュアルクリエイター",
+      "description": "AI画像・動画生成ツールを使って、美しいビジュアルコンテンツを創造するクリエイター。感性と技術を融合させた作品を生み出す。",
+      "skills": ["ビジュアルセンス", "AI画像生成", "色彩感覚", "構図", "クリエイティブツール"],
+      "futureProspect": "high",
+      "futureProspectDescription": "ビジュアルコンテンツの需要増加。AIを使いこなせるクリエイターが求められる。",
+      "aptitudes": {
+        "strengths": ["美的感覚", "感性を形にする力", "自由な発想", "独自性"],
+        "workStyles": ["自分のペースで創作できる環境", "感性を活かせる職場"]
+      }
+    },
+    "ISFP-T": {
+      "id": "isfp-t",
+      "type": "ISFP-T",
+      "name": "AIサウンドデザイナー",
+      "description": "AI音楽・音声生成ツールを活用して、音楽や効果音を制作するクリエイター。感情を揺さぶるサウンドを創造する。",
+      "skills": ["音楽センス", "AI音声生成", "編集スキル", "感性", "細部へのこだわり"],
+      "futureProspect": "medium",
+      "futureProspectDescription": "動画・ゲーム・VRなど、サウンド需要は多様化。",
+      "aptitudes": {
+        "strengths": ["繊細な感性", "音への敏感さ", "独自の世界観", "表現力"],
+        "workStyles": ["没頭できる創作環境", "自分の感性を信じられる職場"]
+      }
+    },
+    "ISTJ-A": {
+      "id": "istj-a",
+      "type": "ISTJ-A",
+      "name": "AIオペレーションマネージャー",
+      "description": "AIモデルの本番環境での運用・保守を管理する職業（MLOps）。システムの安定稼働を担保し、効率的な運用体制を構築する。",
+      "skills": ["運用管理", "AI/ML理解", "インフラ知識", "モニタリング", "プロセス設計"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AIの本番運用が増えるほど、MLOps人材の需要は高まる。",
+      "aptitudes": {
+        "strengths": ["責任感", "安定した実行力", "システマティックな思考", "信頼性"],
+        "workStyles": ["明確な役割と責任がある環境", "安定した運用が求められる職場"]
+      }
+    },
+    "ISTJ-T": {
+      "id": "istj-t",
+      "type": "ISTJ-T",
+      "name": "AIクオリティアシュアランス",
+      "description": "AIシステムの品質を検証・保証する職業（AI QA）。テスト計画の策定から実行、レポートまで、品質管理の全プロセスを担う。",
+      "skills": ["品質管理", "テスト設計", "AI理解", "ドキュメンテーション", "分析力"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AIの品質保証は今後ますます重要に。専門家の需要は高い。",
+      "aptitudes": {
+        "strengths": ["細部を見逃さない", "正確性へのこだわり", "計画的な実行力", "論理性"],
+        "workStyles": ["品質に責任を持つ立場", "チェックリストに沿った仕事"]
+      }
+    },
+    "ISTP-A": {
+      "id": "istp-a",
+      "type": "ISTP-A",
+      "name": "AIハードウェアエンジニア",
+      "description": "AI処理に特化したハードウェア（GPU、TPU、専用チップ）の設計・開発を行うエンジニア。AIの高速化・効率化を実現する。",
+      "skills": ["電子工学", "回路設計", "AI理解", "性能最適化", "問題解決"],
+      "futureProspect": "high",
+      "futureProspectDescription": "AIの計算需要増加に伴い、専用ハードウェアの需要も増大。",
+      "aptitudes": {
+        "strengths": ["実践的な技術力", "問題を分解して解決する力", "手を動かす能力", "論理性"],
+        "workStyles": ["技術的な課題に取り組める環境", "実験と試行錯誤ができる職場"]
+      }
+    },
+    "ISTP-T": {
+      "id": "istp-t",
+      "type": "ISTP-T",
+      "name": "コンテキストエンジニア",
+      "description": "AIシステムに適切なコンテキスト（文脈情報）を設計・提供するエンジニア。AIの理解力と応答品質を最大化するための情報設計を行う。",
+      "skills": ["情報設計", "AI理解", "データ構造化", "分析力", "最適化思考"],
+      "futureProspect": "high",
+      "futureProspectDescription": "LLMの普及に伴い、コンテキスト設計の重要性は増大。",
+      "aptitudes": {
+        "strengths": ["論理的な分析", "効率を追求する姿勢", "技術への深い理解", "問題解決力"],
+        "workStyles": ["技術的な深掘りができる環境", "一人で問題に取り組める職場"]
+      }
+    }
+  }
+}

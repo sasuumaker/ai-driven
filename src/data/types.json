@@ -1,0 +1,113 @@
+{
+  "version": "1.0.0",
+  "types": {
+    "ENFJ": {
+      "code": "ENFJ",
+      "nickname": "主人公",
+      "description": "カリスマ性があり、人々を鼓舞するリーダータイプ。他者の成長を支援することに喜びを感じる。",
+      "color": "#A8D5BA"
+    },
+    "ENFP": {
+      "code": "ENFP",
+      "nickname": "広報運動家",
+      "description": "熱意にあふれ、創造的で社交的な自由人。可能性を追求し、人々を励ます。",
+      "color": "#FFB7B2"
+    },
+    "ENTJ": {
+      "code": "ENTJ",
+      "nickname": "指揮官",
+      "description": "大胆で想像力豊か、強い意志を持つリーダー。道を見つけるか、自ら道を作る。",
+      "color": "#B5EAD7"
+    },
+    "ENTP": {
+      "code": "ENTP",
+      "nickname": "討論者",
+      "description": "賢くて好奇心旺盛な思想家。知的挑戦を楽しむ。",
+      "color": "#FFDAC1"
+    },
+    "ESFJ": {
+      "code": "ESFJ",
+      "nickname": "領事官",
+      "description": "思いやりがあり社交的で人気がある。常に人助けに熱心。",
+      "color": "#FFC8DD"
+    },
+    "ESFP": {
+      "code": "ESFP",
+      "nickname": "エンターテイナー",
+      "description": "自発的でエネルギッシュ、楽しいことが大好き。周りの人を楽しませる才能がある。",
+      "color": "#FFF3B0"
+    },
+    "ESTJ": {
+      "code": "ESTJ",
+      "nickname": "幹部",
+      "description": "優れた管理者。物事や人を管理する能力に長けている。",
+      "color": "#C7CEEA"
+    },
+    "ESTP": {
+      "code": "ESTP",
+      "nickname": "起業家",
+      "description": "賢く、エネルギッシュで、非常に知覚的。危険を冒すことを楽しむ。",
+      "color": "#BDE0FE"
+    },
+    "INFJ": {
+      "code": "INFJ",
+      "nickname": "提唱者",
+      "description": "静かで神秘的だが、非常に鼓舞的で疲れを知らない理想主義者。",
+      "color": "#E2F0CB"
+    },
+    "INFP": {
+      "code": "INFP",
+      "nickname": "仲介者",
+      "description": "詩的で親切な利他主義者。良い目的のために常に助けようとする。",
+      "color": "#FFB7B2"
+    },
+    "INTJ": {
+      "code": "INTJ",
+      "nickname": "建築家",
+      "description": "想像力豊かで戦略的な思考者。すべてに計画がある。",
+      "color": "#B5EAD7"
+    },
+    "INTP": {
+      "code": "INTP",
+      "nickname": "論理学者",
+      "description": "革新的な発明家。知識への飽くなき渇望を持つ。",
+      "color": "#C7CEEA"
+    },
+    "ISFJ": {
+      "code": "ISFJ",
+      "nickname": "擁護者",
+      "description": "非常に献身的で温かい守護者。大切な人を守る準備ができている。",
+      "color": "#FFC8DD"
+    },
+    "ISFP": {
+      "code": "ISFP",
+      "nickname": "冒険家",
+      "description": "柔軟で魅力的な芸術家。常に新しい経験を探求する準備ができている。",
+      "color": "#FFDAC1"
+    },
+    "ISTJ": {
+      "code": "ISTJ",
+      "nickname": "管理者",
+      "description": "実用的で事実に基づいた個人。信頼性は疑いようがない。",
+      "color": "#BDE0FE"
+    },
+    "ISTP": {
+      "code": "ISTP",
+      "nickname": "巨匠",
+      "description": "大胆で実践的な実験者。あらゆる種類のツールを使いこなす。",
+      "color": "#E2F0CB"
+    }
+  },
+  "identities": {
+    "A": {
+      "code": "A",
+      "name": "自己主張型",
+      "description": "自信に満ち、ストレス耐性が高い。感情の起伏が少なく、自分の能力を信じている。"
+    },
+    "T": {
+      "code": "T",
+      "name": "慎重型",
+      "description": "自己改善意欲が高く、完璧主義的傾向がある。成功への強い意欲を持つが、ストレスを感じやすい。"
+    }
+  }
+}
