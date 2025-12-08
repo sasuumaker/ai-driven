@@ -1,0 +1,208 @@
+{
+  "$schema": "./features-schema.json",
+  "projectName": "AI職業診断アプリ",
+  "createdAt": "2025-12-08 19:57:41",
+  "lastUpdated": "2025-12-08 19:57:41",
+  "totalFeatures": 12,
+  "completedFeatures": 0,
+  "features": [
+    {
+      "id": "feat-001",
+      "category": "setup",
+      "title": "プロジェクト初期設定",
+      "description": "開発環境のセットアップと基本設定",
+      "steps": [
+        "依存関係のインストール",
+        "Tailwindカラーパレット設定",
+        "フォント設定（Noto Sans JP, Inter）",
+        "開発サーバーの起動確認"
+      ],
+      "priority": "high",
+      "passed": false,
+      "testedAt": null,
+      "notes": ""
+    },
+    {
+      "id": "feat-002",
+      "category": "ui",
+      "title": "共通コンポーネント作成",
+      "description": "Button, Card, ProgressBar, Headerコンポーネント",
+      "steps": [
+        "Buttonコンポーネント（パステルカラー、角丸）",
+        "Cardコンポーネント（白背景、シャドウ）",
+        "ProgressBarコンポーネント（グラデーション）",
+        "Headerコンポーネント"
+      ],
+      "priority": "high",
+      "passed": false,
+      "testedAt": null,
+      "notes": ""
+    },
+    {
+      "id": "feat-003",
+      "category": "data",
+      "title": "質問データ作成",
+      "description": "60問の診断質問（5軸×12問）",
+      "steps": [
+        "questions.jsonファイル作成",
+        "E/I軸の質問12問",
+        "S/N軸の質問12問",
+        "T/F軸の質問12問",
+        "J/P軸の質問12問",
+        "A/T軸の質問12問"
+      ],
+      "priority": "high",
+      "passed": false,
+      "testedAt": null,
+      "notes": ""
+    },
+    {
+      "id": "feat-004",
+      "category": "data",
+      "title": "AI職業データ作成",
+      "description": "32種類のAI職業データ",
+      "steps": [
+        "jobs.jsonファイル作成",
+        "各タイプの職業名・説明・スキル定義",
+        "将来性の設定"
+      ],
+      "priority": "high",
+      "passed": false,
+      "testedAt": null,
+      "notes": ""
+    },
+    {
+      "id": "feat-005",
+      "category": "data",
+      "title": "MBTIタイプ情報作成",
+      "description": "16タイプ×2のタイプ情報",
+      "steps": [
+        "types.jsonファイル作成",
+        "各タイプの愛称・特徴説明"
+      ],
+      "priority": "high",
+      "passed": false,
+      "testedAt": null,
+      "notes": ""
+    },
+    {
+      "id": "feat-006",
+      "category": "core",
+      "title": "状態管理・診断ロジック実装",
+      "description": "QuizContextと結果計算ロジック",
+      "steps": [
+        "QuizContext作成",
+        "回答状態の管理",
+        "スコアリング計算ロジック",
+        "タイプ判定ロジック"
+      ],
+      "priority": "high",
+      "passed": false,
+      "testedAt": null,
+      "notes": ""
+    },
+    {
+      "id": "feat-007",
+      "category": "page",
+      "title": "トップページ実装",
+      "description": "ヒーローセクション・アプリ説明・CTAボタン",
+      "steps": [
+        "ヒーローセクション",
+        "アプリ説明文",
+        "「診断を始める」ボタン",
+        "レスポンシブ対応"
+      ],
+      "priority": "high",
+      "passed": false,
+      "testedAt": null,
+      "notes": ""
+    },
+    {
+      "id": "feat-008",
+      "category": "page",
+      "title": "診断ページ実装",
+      "description": "60問の質問に回答するUI",
+      "steps": [
+        "QuestionCardコンポーネント",
+        "AnswerOptionsコンポーネント（5段階）",
+        "プログレス表示",
+        "前へ/次へナビゲーション",
+        "10問ごとの励ましメッセージ",
+        "離脱防止ダイアログ"
+      ],
+      "priority": "high",
+      "passed": false,
+      "testedAt": null,
+      "notes": ""
+    },
+    {
+      "id": "feat-009",
+      "category": "page",
+      "title": "結果ページ実装",
+      "description": "診断結果とAI職業の表示",
+      "steps": [
+        "ResultHeaderコンポーネント",
+        "JobCardコンポーネント",
+        "SkillsListコンポーネント",
+        "AptitudeSectionコンポーネント",
+        "TypeBreakdownコンポーネント"
+      ],
+      "priority": "high",
+      "passed": false,
+      "testedAt": null,
+      "notes": ""
+    },
+    {
+      "id": "feat-010",
+      "category": "feature",
+      "title": "Xシェア機能実装",
+      "description": "結果をTwitterでシェア",
+      "steps": [
+        "ShareButtonコンポーネント",
+        "シェアテキスト生成ロジック",
+        "Twitter Intent URL構築"
+      ],
+      "priority": "high",
+      "passed": false,
+      "testedAt": null,
+      "notes": ""
+    },
+    {
+      "id": "feat-011",
+      "category": "polish",
+      "title": "アニメーション追加",
+      "description": "UIアニメーションの実装",
+      "steps": [
+        "ページ遷移アニメーション",
+        "プログレスバーアニメーション",
+        "回答選択時フィードバック",
+        "結果表示アニメーション"
+      ],
+      "priority": "medium",
+      "passed": false,
+      "testedAt": null,
+      "notes": ""
+    },
+    {
+      "id": "feat-012",
+      "category": "deploy",
+      "title": "Vercelデプロイ",
+      "description": "本番環境へのデプロイ",
+      "steps": [
+        "Vercelプロジェクト作成",
+        "環境変数設定",
+        "本番デプロイ",
+        "動作確認"
+      ],
+      "priority": "medium",
+      "passed": false,
+      "testedAt": null,
+      "notes": ""
+    }
+  ],
+  "_rules": {
+    "IMPORTANT": "フィーチャーの削除は禁止。完了したらpassedをtrueに変更するのみ。",
+    "addOnly": true,
+    "deleteProhibited": true
+  }
+}
