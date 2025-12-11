@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${notoSansJP.variable} font-sans antialiased bg-pastel-pink`}>
+      <body className={`${notoSansJP.variable} font-sans antialiased bg-black text-white`}>
         <QuizProvider>{children}</QuizProvider>
       </body>
     </html>

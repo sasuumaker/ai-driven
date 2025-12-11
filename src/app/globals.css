@@ -2,10 +2,10 @@
 
 :root {
   /* Background Colors */
-  --background: #FFC8DD;
-  --background-secondary: #f8f9fa;
-  --foreground: #333333;
-  --foreground-secondary: #666666;
+  --background: #000000;
+  --background-secondary: #1a1a1a;
+  --foreground: #ffffff;
+  --foreground-secondary: #cccccc;
 
   /* Pastel Colors */
   --pastel-mint: #A8D5BA;
