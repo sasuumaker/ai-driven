@@ -22,7 +22,14 @@
 | JSON ファイル | 質問データ、職業データの静的管理 |
 | TypeScript 型定義 | データ構造の型安全性確保 |
 
-### 1.4 その他
+### 1.4 認証・データベース
+| 技術 | 用途 |
+|------|------|
+| Supabase Auth | ユーザー認証（メール/パスワード） |
+| Supabase Database | ユーザープロファイル・診断履歴の保存 |
+| @supabase/ssr | Next.js App Router対応のSSR認証 |
+
+### 1.5 その他
 | 技術 | 用途 |
 |------|------|
 | next/font | Webフォント最適化 |
@@ -77,7 +84,8 @@ ai-driven/
 │   │       └── ShareButton.tsx
 │   │
 │   ├── contexts/                # React Context
-│   │   └── QuizContext.tsx      # 診断状態管理
+│   │   ├── QuizContext.tsx      # 診断状態管理
+│   │   └── AuthContext.tsx      # 認証状態管理
 │   │
 │   ├── hooks/                   # カスタムフック
 │   │   ├── useQuiz.ts          # 診断ロジック
@@ -91,12 +99,19 @@ ai-driven/
 │   ├── lib/                     # ユーティリティ
 │   │   ├── calculateResult.ts  # 結果計算ロジック
 │   │   ├── constants.ts        # 定数
-│   │   └── utils.ts            # 汎用ユーティリティ
+│   │   ├── utils.ts            # 汎用ユーティリティ
+│   │   ├── supabase/           # Supabaseクライアント
+│   │   │   ├── client.ts       # ブラウザ用クライアント
+│   │   │   ├── server.ts       # サーバー用クライアント
+│   │   │   └── middleware.ts   # ミドルウェア用
+│   │   └── api/
+│   │       └── history.ts      # 履歴CRUD操作
 │   │
 │   └── types/                   # TypeScript型定義
 │       ├── quiz.ts             # 診断関連の型
 │       ├── job.ts              # 職業関連の型
-│       └── mbti.ts             # MBTIタイプの型
+│       ├── mbti.ts             # MBTIタイプの型
+│       └── auth.ts             # 認証関連の型
 │
 ├── public/                      # 静的ファイル
 │   ├── images/
@@ -404,3 +419,90 @@ NEXT_PUBLIC_OG_IMAGE_URL=https://ai-career-finder.vercel.app/og-image.png
 - ユーザーの回答データはブラウザ内でのみ処理
 - サーバーへの送信なし
 - ローカルストレージへの保存なし（プライバシー配慮）
+
+---
+
+## 10. 認証アーキテクチャ
+
+### 10.1 認証フロー
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     Next.js App Router                      │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  middleware.ts                                              │
+│  └─ セッションリフレッシュ（全リクエスト）                  │
+│                                                             │
+│  src/lib/supabase/                                          │
+│  ├─ client.ts    ← ブラウザ（Client Components）            │
+│  ├─ server.ts    ← サーバー（Server Components/Actions）    │
+│  └─ middleware.ts ← Middleware用                            │
+│                                                             │
+│  src/contexts/AuthContext.tsx                               │
+│  └─ 認証状態のグローバル管理（user, session, isLoading）    │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+┌─────────────────────────────────────────────────────────────┐
+│                      Supabase                               │
+├─────────────────────────────────────────────────────────────┤
+│  Auth                                                       │
+│  ├─ メール/パスワード認証                                   │
+│  ├─ セッション管理（JWT + リフレッシュトークン）            │
+│  └─ メール確認フロー                                        │
+│                                                             │
+│  Database                                                   │
+│  ├─ profiles テーブル（ユーザー情報）                       │
+│  └─ diagnosis_history テーブル（診断履歴）                  │
+│                                                             │
+│  Row Level Security (RLS)                                   │
+│  └─ ユーザーは自分のデータのみアクセス可能                  │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 10.2 認証状態管理
+
+```typescript
+// AuthContext の状態
+interface AuthContextValue {
+  user: User | null;          // Supabase User オブジェクト
+  session: Session | null;    // Supabase Session
+  isLoading: boolean;         // 初期化中フラグ
+}
+```
+
+### 10.3 認証ルート
+
+| パス | 説明 |
+|------|------|
+| `/login` | ログインページ |
+| `/signup` | サインアップページ |
+| `/auth/callback` | OAuth/メール確認コールバック |
+| `/auth/signout` | サインアウト処理（POST） |
+
+### 10.4 保護されたルート
+
+| パス | 認証要件 |
+|------|----------|
+| `/` | 不要 |
+| `/quiz` | 不要 |
+| `/result/[type]` | 不要（保存のみ認証必要） |
+| `/history` | **必須** |
+
+### 10.5 履歴保存フロー
+
+```
+[結果ページ]
+    │
+    ├─ 未ログイン時
+    │   └─ 「履歴を保存」クリック
+    │       └─ ログインモーダル表示
+    │           └─ ログイン後、自動保存
+    │
+    └─ ログイン済み時
+        └─ 「履歴を保存」クリック
+            └─ diagnosis_history に INSERT
+                └─ トースト通知「保存しました」
+```

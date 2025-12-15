@@ -1,11 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import { AuthButton } from '@/components/auth/AuthButton';
 
 export function Header() {
   return (
     <header className="w-full py-4 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto flex items-center justify-between">
         <Link href="/" className="inline-flex items-center gap-2 group">
           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pastel-mint to-pastel-green flex items-center justify-center">
             <span className="text-white font-bold text-sm">AI</span>
@@ -14,6 +15,7 @@ export function Header() {
             AI職業診断
           </span>
         </Link>
+        <AuthButton />
       </div>
     </header>
   );

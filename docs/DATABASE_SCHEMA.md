@@ -349,7 +349,163 @@ export interface DiagnosisResult {
 
 ---
 
-## 7. 将来のデータベース移行計画
+---
+
+## 7. Supabase データベーススキーマ（認証・履歴機能）
+
+### 7.1 profiles テーブル
+
+ユーザープロファイル情報を管理。`auth.users` と連携。
+
+```sql
+CREATE TABLE profiles (
+  id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+  email TEXT,
+  display_name TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- インデックス
+CREATE INDEX idx_profiles_email ON profiles(email);
+```
+
+| カラム | 型 | 必須 | 説明 |
+|--------|-----|------|------|
+| id | UUID | Yes | auth.users.id への外部キー |
+| email | TEXT | No | ユーザーメールアドレス |
+| display_name | TEXT | No | 表示名 |
+| created_at | TIMESTAMP | Yes | 作成日時 |
+| updated_at | TIMESTAMP | Yes | 更新日時 |
+
+### 7.2 diagnosis_history テーブル
+
+診断履歴を保存。
+
+```sql
+CREATE TABLE diagnosis_history (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+  mbti_type VARCHAR(10) NOT NULL,
+  job_name TEXT NOT NULL,
+  axis_results JSONB,
+  diagnosed_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- インデックス
+CREATE INDEX idx_diagnosis_history_user_id ON diagnosis_history(user_id);
+CREATE INDEX idx_diagnosis_history_diagnosed_at ON diagnosis_history(diagnosed_at DESC);
+```
+
+| カラム | 型 | 必須 | 説明 |
+|--------|-----|------|------|
+| id | UUID | Yes | 主キー（自動生成） |
+| user_id | UUID | Yes | ユーザーID |
+| mbti_type | VARCHAR(10) | Yes | 診断結果（例: "ENFJ-A"） |
+| job_name | TEXT | Yes | AI職業名 |
+| axis_results | JSONB | No | 各軸の詳細スコア |
+| diagnosed_at | TIMESTAMP | Yes | 診断日時 |
+
+#### axis_results JSONB 構造
+
+```json
+[
+  {
+    "axis": "EI",
+    "primary": "E",
+    "secondary": "I",
+    "percentage": 65
+  },
+  {
+    "axis": "SN",
+    "primary": "N",
+    "secondary": "S",
+    "percentage": 72
+  }
+]
+```
+
+### 7.3 Row Level Security (RLS) ポリシー
+
+```sql
+-- profiles テーブル
+ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Users can view own profile"
+  ON profiles FOR SELECT
+  USING (auth.uid() = id);
+
+CREATE POLICY "Users can update own profile"
+  ON profiles FOR UPDATE
+  USING (auth.uid() = id);
+
+CREATE POLICY "Users can insert own profile"
+  ON profiles FOR INSERT
+  WITH CHECK (auth.uid() = id);
+
+-- diagnosis_history テーブル
+ALTER TABLE diagnosis_history ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Users can view own history"
+  ON diagnosis_history FOR SELECT
+  USING (auth.uid() = user_id);
+
+CREATE POLICY "Users can insert own history"
+  ON diagnosis_history FOR INSERT
+  WITH CHECK (auth.uid() = user_id);
+
+CREATE POLICY "Users can delete own history"
+  ON diagnosis_history FOR DELETE
+  USING (auth.uid() = user_id);
+```
+
+### 7.4 トリガー（自動プロファイル作成）
+
+新規ユーザー登録時に自動的に profiles レコードを作成。
+
+```sql
+CREATE OR REPLACE FUNCTION public.handle_new_user()
+RETURNS TRIGGER
+SET search_path = ''
+AS $$
+BEGIN
+  INSERT INTO public.profiles (id, email)
+  VALUES (NEW.id, NEW.email);
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+CREATE TRIGGER on_auth_user_created
+  AFTER INSERT ON auth.users
+  FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
+```
+
+### 7.5 TypeScript 型定義
+
+```typescript
+// /src/types/auth.ts
+
+export interface Profile {
+  id: string;
+  email: string | null;
+  display_name: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface DiagnosisHistory {
+  id: string;
+  user_id: string;
+  mbti_type: string;
+  job_name: string;
+  axis_results: AxisResult[] | null;
+  diagnosed_at: string;
+}
+```
+
+---
+
+## 8. 将来のデータベース移行計画
 
 将来的にCMS機能や管理画面が必要になった場合、以下の構成への移行を推奨:
 

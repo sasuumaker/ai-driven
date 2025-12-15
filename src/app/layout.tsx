@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
 import { QuizProvider } from '@/contexts/QuizContext';
+import { AuthProvider } from '@/contexts/AuthContext';
 
 const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
@@ -35,7 +36,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={`${notoSansJP.variable} font-sans antialiased bg-black text-white`}>
-        <QuizProvider>{children}</QuizProvider>
+        <AuthProvider>
+          <QuizProvider>{children}</QuizProvider>
+        </AuthProvider>
       </body>
     </html>
   );

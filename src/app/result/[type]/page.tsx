@@ -11,6 +11,7 @@ import {
   TypeBreakdown,
   ShareButton,
 } from '@/components/result';
+import { SaveResultButton } from '@/components/auth/SaveResultButton';
 import { useQuiz } from '@/contexts/QuizContext';
 import { AIJob, MBTITypeInfo, IdentityInfo, AxisResult, MBTICode, Identity } from '@/types';
 import jobsData from '@/data/jobs.json';
@@ -106,15 +107,27 @@ export default function ResultPage({ params }: ResultPageProps) {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <ShareButton
-              type={decodedType}
-              jobName={job.name}
-              nickname={typeInfo.nickname}
-            />
-            <Button variant="outline" onClick={handleRetry}>
-              もう一度診断する
-            </Button>
+          <div className="space-y-4 pt-4">
+            {/* Save Button */}
+            {axisResults && (
+              <SaveResultButton
+                mbtiType={decodedType}
+                jobName={job.name}
+                axisResults={axisResults}
+              />
+            )}
+
+            {/* Share and Retry Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ShareButton
+                type={decodedType}
+                jobName={job.name}
+                nickname={typeInfo.nickname}
+              />
+              <Button variant="outline" onClick={handleRetry}>
+                もう一度診断する
+              </Button>
+            </div>
           </div>
         </div>
       </main>
