@@ -1,0 +1,9 @@
+{
+  "disabledMcpjsonServers": [
+    "filesystem",
+    "brave-search",
+    "google-calendar",
+    "supabase",
+    "playwright"
+  ]
+}
