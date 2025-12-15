@@ -9,7 +9,7 @@ export function LoginForm() {
   const [error, setError] = useState<string | null>(null)
   const [isPending, startTransition] = useTransition()
   const searchParams = useSearchParams()
-  const next = searchParams.get('next') || '/'
+  const next = searchParams.get('next') || '/mypage'
 
   function handleSubmit(formData: FormData) {
     setError(null)

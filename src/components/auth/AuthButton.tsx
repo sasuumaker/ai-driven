@@ -66,6 +66,14 @@ export function AuthButton() {
           </div>
 
           <Link
+            href="/mypage"
+            onClick={() => setIsMenuOpen(false)}
+            className="block px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
+          >
+            マイページ
+          </Link>
+
+          <Link
             href="/history"
             onClick={() => setIsMenuOpen(false)}
             className="block px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
