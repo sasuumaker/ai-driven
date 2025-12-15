@@ -16,10 +16,15 @@ const AuthContext = createContext<AuthContextValue>({
   isLoading: true,
 })
 
-export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User | null>(null)
+interface AuthProviderProps {
+  children: ReactNode
+  initialUser?: User | null
+}
+
+export function AuthProvider({ children, initialUser = null }: AuthProviderProps) {
+  const [user, setUser] = useState<User | null>(initialUser)
   const [session, setSession] = useState<Session | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(!initialUser)
 
   useEffect(() => {
     const supabase = createClient()

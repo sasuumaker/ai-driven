@@ -3,6 +3,7 @@ import { Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
 import { QuizProvider } from '@/contexts/QuizContext';
 import { AuthProvider } from '@/contexts/AuthContext';
+import { createClient } from '@/lib/supabase/server';
 
 const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
@@ -28,15 +29,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
   return (
     <html lang="ja">
       <body className={`${notoSansJP.variable} font-sans antialiased bg-black text-white`}>
-        <AuthProvider>
+        <AuthProvider initialUser={user}>
           <QuizProvider>{children}</QuizProvider>
         </AuthProvider>
       </body>
