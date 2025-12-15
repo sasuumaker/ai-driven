@@ -42,5 +42,5 @@ export async function signup(formData: FormData) {
   }
 
   revalidatePath('/', 'layout')
-  redirect('/login?message=確認メールを送信しました。メールを確認してください。')
+  redirect('/login?message=' + encodeURIComponent('確認メールを送信しました。メールを確認してください。'))
 }
