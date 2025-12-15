@@ -1,15 +1,19 @@
 'use client'
 
 import { useState, useTransition } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { login } from '@/app/login/actions'
 
 export function LoginForm() {
   const [error, setError] = useState<string | null>(null)
   const [isPending, startTransition] = useTransition()
+  const searchParams = useSearchParams()
+  const next = searchParams.get('next') || '/'
 
   function handleSubmit(formData: FormData) {
     setError(null)
+    formData.append('next', next)
     startTransition(async () => {
       const result = await login(formData)
       if (result?.error) {
