@@ -1,12 +1,20 @@
 'use client'
 
 import Link from 'next/link'
+import type { User } from '@supabase/supabase-js'
 import { useAuth } from '@/contexts/AuthContext'
 
-export function AuthButton() {
-  const { user, isLoading } = useAuth()
+interface AuthButtonProps {
+  initialUser?: User | null;
+}
 
-  if (isLoading) {
+export function AuthButton({ initialUser }: AuthButtonProps) {
+  const { user: authUser, isLoading } = useAuth()
+
+  // サーバーから渡されたユーザー情報を優先、なければAuthContextを使用
+  const user = initialUser !== undefined ? initialUser : authUser
+
+  if (isLoading && initialUser === undefined) {
     return (
       <div className="w-20 h-9 rounded-full bg-gray-700 animate-pulse" />
     )

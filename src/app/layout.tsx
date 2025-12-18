@@ -39,7 +39,7 @@ export default async function RootLayout({
 
   return (
     <html lang="ja">
-      <body className={`${notoSansJP.variable} font-sans antialiased bg-black text-white`}>
+      <body className={`${notoSansJP.variable} font-sans antialiased bg-white text-gray-900`}>
         <AuthProvider initialUser={user}>
           <QuizProvider>{children}</QuizProvider>
         </AuthProvider>

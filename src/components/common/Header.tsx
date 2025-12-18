@@ -1,9 +1,14 @@
 'use client';
 
 import Link from 'next/link';
+import type { User } from '@supabase/supabase-js';
 import { AuthButton } from '@/components/auth/AuthButton';
 
-export function Header() {
+interface HeaderProps {
+  initialUser?: User | null;
+}
+
+export function Header({ initialUser }: HeaderProps) {
   return (
     <header className="w-full py-4 px-6">
       <div className="max-w-4xl mx-auto flex items-center justify-between">
@@ -15,7 +20,7 @@ export function Header() {
             AI職業診断
           </span>
         </Link>
-        <AuthButton />
+        <AuthButton initialUser={initialUser} />
       </div>
     </header>
   );
